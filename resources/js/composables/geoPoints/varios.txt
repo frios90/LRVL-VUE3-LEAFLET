@@ -1,0 +1,116 @@
+    /** funciones al montar el componente*/
+    // const startMap = onMounted(() => {
+    //     map = L.map("map", {
+    //         center: center_map.value,
+    //         zoom: zoom_map.value,
+    //         layers: open_street_map,
+    //     });
+
+    //     axios.get('/geospatial/museums/test')
+    //     .then(response => {
+    //         var geometry_provinces = response.data.provinces.map((p) => {
+    //             var _color =  getRandomHexColor();
+    //             console.log(_color)
+    //             return {
+    //                 "type": "Feature",
+    //                 "properties": {"name": `${p.name}`, "color": _color},
+    //                 "geometry": JSON.parse(p.geometry)
+    //             }
+    //         })
+
+    //         const onEachFeature = (feature, layer) => {
+    //             if (feature.properties && feature.properties.name) {
+    //                 layer.bindPopup(feature.properties.name);
+    //             }
+    //         }
+
+    //         L.geoJSON(geometry_provinces, {
+    //             style: function(feature) {
+    //                 console.log(feature)
+    //                 return {color: feature.properties.color}
+    //             },
+    //             onEachFeature: onEachFeature
+    //         }).addTo(map);
+
+
+
+    //         /**------*/
+
+
+    //         response.data.museums.forEach( e => {
+    //             var icon = L.icon({
+    //                 iconUrl: "icons/museo.png",
+    //                 iconSize: [30, 40],
+    //                 iconAnchor: [15, 40]
+    //             });
+    //             var new_museum = L.marker([parseFloat(e.lat), parseFloat(e.long)], {
+    //                 title: `${e.nombre}`,
+    //                 draggable:false,
+    //                 icon:icon
+    //             }).bindPopup(`${e.nombre}`);
+
+    //             museums_markers.push(new_museum);
+    //         })
+
+    //         var M = L.layerGroup(museums_markers);
+
+    //         response.data.hospitals.forEach( e => {
+    //             var icon = L.icon({
+    //                 iconUrl: "icons/hospital.png",
+    //                 iconSize: [30, 40],
+    //                 iconAnchor: [15, 40]
+    //             });
+    //             var new_hospitals = L.marker([parseFloat(e.lat), parseFloat(e.long)], {
+    //                 title: `${e.nombre} - ${e.tipo}`,
+    //                 draggable:false,
+    //                 icon:icon
+    //             }).bindPopup(`${e.nombre} - ${e.tipo}`);
+
+    //             hospitals_markers.push(new_hospitals);
+    //         })
+
+    //         var H = L.layerGroup(hospitals_markers);
+
+    //         response.data.polices.forEach( e => {
+    //             var icon = L.icon({
+    //                 iconUrl: "icons/policia.png",
+    //                 iconSize: [32, 32],
+    //                 iconAnchor: [16, 32]
+    //             });
+    //             var new_police = L.marker([parseFloat(e.lat), parseFloat(e.long)], {
+    //                 title: `${e.nombre_uni} - ${e.tipo_de_un}`,
+    //                 draggable:false,
+    //                 icon:icon
+    //             }).bindPopup(`${e.nombre_uni} - ${e.tipo_de_un}`);
+
+    //             polices_markers.push(new_police);
+    //         })
+
+    //         var P = L.layerGroup(polices_markers);
+
+
+    //         var baseMaps = {
+    //             "Open_Street_Map": open_street_map,
+    //         };
+
+    //         var overlayMaps = {
+    //             "<span><img src='./icons/museo.png' style='width: 16px; height: 16px'>Museos</span>": M,
+    //             "<span><img src='./icons/hospital.png' style='width: 16px; height: 16px'>Hospitales</span>": H,
+    //             "<span><img src='./icons/policia.png' style='width: 16px; height: 16px'>Policias</span>": P,
+    //         };
+
+
+    //         var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+    //     })
+    // })
+
+
+
+
+
+    // const test = onMounted(() => {
+    //     L.geoJSON(geojsonFeature, {
+    //         onEachFeature: onEachFeature
+    //     }).addTo(map);
+    // })
+

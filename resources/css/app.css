@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Nunito";
+    src: url('../../public/fonts/Nunito/Nunito-VariableFont_wght.ttf');
+  }
+
+body {
+    background-color: black;
+    color: aliceblue;
+    font-family: "Nunito", "PT Sans", Calibri, Tahoma, sans-serif;
+}
+
+a{
+  color : #fff!important
+}
